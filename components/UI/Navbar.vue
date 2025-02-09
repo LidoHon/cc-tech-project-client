@@ -31,7 +31,7 @@ const handleLogout = async () => {
 <template>
   <div v-if="isAuthenticated">
     <div
-      class="navbar bg-base-100 container mx-auto rounded-xl border-1 border-cyan-200 border-b shadow-md sticky top-0 z-50 custom-navbar"
+      class="navbar bg-base-100 container mx-auto rounded-xl border-1 border-cyan-200 border-b shadow-md sticky top-0 z-50 custom-navbar dark:bg-slate-600"
     >
       <div class="flex-1">
         <a class="btn btn-ghost text-xl text-black">Wellcome</a>

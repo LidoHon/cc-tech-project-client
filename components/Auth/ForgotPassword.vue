@@ -55,8 +55,8 @@ const handleForgotPassword = async (value) => {
     <div v-if="passwordReset" class="w-full">
       <div class="pt-5 space-y-6">
         <div class="flex flex-col items-center justify-center">
-          <h1 class="font-bold text-xl">Reset Password</h1>
-          <p class="text-xs">
+          <h1 class="font-bold text-xl dark:text-gray-100">Reset Password</h1>
+          <p class="text-xs dark:text-gray-100">
             Fill in your e-mail address below and we will send you an email with
             further instructions.
           </p>

@@ -153,7 +153,6 @@ const handleUpdateProfle = async (value) => {
   }
 };
 
-
 // Reactive state for toggling sections
 const showProfileUpdate = ref(false);
 
@@ -163,15 +162,11 @@ const toggleProfileUpdate = () => {
 </script>
 
 <template>
-  <div class="min-h-screen container mx-auto bg-gray-100 p-6">
+  <div class="min-h-50vh container mx-auto bg-gray-100 p-6 dark:bg-[#1D232A]">
     <!-- Header Section -->
     <div class="flex items-center space-x-4">
       <div class="avatar online">
         <div class="w-24 rounded-full">
-          <!-- <img
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-            alt="User Avatar"
-          /> -->
           <img
             :src="useAuthStore.$state.user.profile"
             :alt="`${useAuthStore.$state.user.username}'s profile`"
@@ -180,17 +175,16 @@ const toggleProfileUpdate = () => {
         </div>
       </div>
       <div>
-        <h1 class="text-2xl font-bold">
+        <h1 class="text-2xl font-bold dark:text-gray-200">
           {{ useAuthStore.$state.user.username }}
         </h1>
-        <p class="text-gray-600">{{ useAuthStore.$state.user.email }}</p>
-        <p class="text-gray-600">{{ useAuthStore.$state.user.phone }}</p>
+        <p class="text-gray-600 dark:text-gray-400">
+          {{ useAuthStore.$state.user.email }}
+        </p>
+        <p class="text-gray-600 dark:text-gray-400">
+          {{ useAuthStore.$state.user.phone }}
+        </p>
         <p class="text-green-600">{{ useAuthStore.$state.user.role }}</p>
-        <!-- <img
-          :src="useAuthStore.$state.user.profile"
-          :alt="`${useAuthStore.$state.user.username}'s profile`"
-          class="w-24 h-24 rounded-full object-cover border border-gray-300"
-        /> -->
 
         <p class="">
           Joined in:
@@ -211,7 +205,7 @@ const toggleProfileUpdate = () => {
 
     <!-- Profile Update Section -->
     <transition name="slide">
-      <div v-if="showProfileUpdate" class="mt-6 bg-white shadow rounded-lg p-6">
+      <div v-if="showProfileUpdate" class="mt-6 bg-white dark:bg-[#475569] shadow rounded-lg p-6">
         <h2 class="text-lg font-bold mb-4">Update Profile</h2>
         <Form
           @submit="handleUpdateProfle"
@@ -223,7 +217,7 @@ const toggleProfileUpdate = () => {
             <UIInput
               name="userName"
               type="text"
-              placeholder="Jenter username"
+              placeholder="enter username"
               label="User Name"
               :is-required="true"
               :edit-mode="true"
@@ -297,7 +291,6 @@ const toggleProfileUpdate = () => {
         </Form>
       </div>
     </transition>
-
   </div>
 </template>
 

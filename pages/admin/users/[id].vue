@@ -31,9 +31,7 @@ onMounted(fetchUserDetails);
 </script>
 
 <template>
-  <div
-    class="p-6 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 min-h-screen"
-  >
+  <div class="p-6 min-h-80vh bg-white dark:bg-[#1D232A] ">
     <!-- Loading Spinner -->
     <div v-if="isLoading" class="flex justify-center items-center min-h-screen">
       <span class="loading loading-spinner loading-lg text-blue-500"></span>
@@ -42,21 +40,21 @@ onMounted(fetchUserDetails);
     <!-- User Details -->
     <div
       v-else-if="userDetails"
-      class="bg-white shadow-lg rounded-xl p-6 max-w-4xl mx-auto"
+      class="bg-white shadow-lg dark:bg-[#475569] rounded-xl p-6 max-w-4xl mx-auto dark:shadow-lg dark:shadow-white"
     >
       <!-- User Basic Info -->
-      <div class="flex flex-col md:flex-row items-center gap-6 mb-8">
+      <div class="flex flex-col md:flex-row items-center gap-6 mb-8 ">
         <img
           :src="userDetails.profile || '/images/user0.png'"
           alt="User Avatar"
           class="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-blue-500 shadow-md"
         />
-        <div class="text-center md:text-left">
+        <div class="text-center md:text-left dark:text-black">
           <h1 class="text-3xl font-bold text-gray-800">
             {{ userDetails.username }}
           </h1>
-          <p class="text-gray-600">{{ userDetails.email }}</p>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-900">{{ userDetails.email }}</p>
+          <p class="text-gray-600 dark:text-gray-900">
             Phone: <span>{{ userDetails.phone || "N/A" }}</span>
           </p>
           <p
@@ -67,7 +65,7 @@ onMounted(fetchUserDetails);
           >
             Email Verified: {{ userDetails.is_email_verified ? "Yes" : "No" }}
           </p>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-900">
             Role: <span class="font-semibold">{{ userDetails.role }}</span>
           </p>
         </div>

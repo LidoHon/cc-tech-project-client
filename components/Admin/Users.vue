@@ -70,14 +70,16 @@ const prevPage = () => {
 </script>
 
 <template>
-  <div class="p-6 bg-gray-100 mb-20">
-    <div class="bg-white shadow-md rounded-lg p-6">
-      <h1 class="text-2xl font-bold text-gray-700 mb-4">Users</h1>
+  <div class="p-6 bg-gray-100 mb-20 dark:bg-[#1D232A]">
+    <div class="bg-white dark:bg-[#475569] shadow-md rounded-lg p-6">
+      <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mb-4">
+        Users
+      </h1>
       <div class="overflow-x-auto">
         <table class="table-auto w-full border-collapse border border-gray-300">
           <!-- Table Head -->
           <thead
-            class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
+            class="bg-gray-200 dark:bg-gray-900 text-gray-600 dark:text-gray-400 uppercase text-sm leading-normal"
           >
             <tr>
               <th class="py-3 px-6 text-left">
@@ -95,11 +97,11 @@ const prevPage = () => {
             </tr>
           </thead>
           <!-- Table Body -->
-          <tbody class="text-gray-700 text-sm font-light">
+          <tbody class="text-gray-700 dark:text-gray-900 text-sm font-light">
             <tr
               v-for="user in paginatedUsers"
               :key="user.id"
-              class="border-b border-gray-200 hover:bg-gray-100"
+              class="border-b border-gray-400 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <td class="py-3 px-6 text-left">
                 <label>
@@ -123,7 +125,9 @@ const prevPage = () => {
                   </div>
                   <div>
                     <div class="font-bold">{{ user.username }}</div>
-                    <div class="text-sm text-gray-500">{{ user.email }}</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                      {{ user.email }}
+                    </div>
                   </div>
                 </div>
               </td>

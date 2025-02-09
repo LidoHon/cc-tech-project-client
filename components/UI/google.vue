@@ -99,7 +99,7 @@ onMounted(() => {
         </svg>
       </div>
 
-      <span class="w-5/6 px-4 py-3 font-bold text-center"
+      <span class="w-5/6 px-4 py-3 font-bold text-center dark:text-gray-100"
         >{{ props.action }} with Google</span
       >
     </div>

@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     "@nuxtjs/apollo",
     "@pinia/nuxt",
     "@primevue/nuxt-module",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/tailwindcss",
 
     [
       "@vee-validate/nuxt",
@@ -30,6 +32,9 @@ export default defineNuxtConfig({
     ],
     "@pinia/nuxt",
   ],
+  colorMode: {
+    classSuffix: ''
+  },
   postcss: {
     plugins: {
       tailwindcss: {},

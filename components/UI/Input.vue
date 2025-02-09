@@ -58,7 +58,7 @@ const handleToggleType = () => {
     <label
       v-if="label"
       :for="`field-${name}`"
-      class="block pl-3 ml-px text-sm font-medium text-gray-700"
+      class="block pl-3 ml-px text-sm font-medium text-gray-700 dark:text-gray-100"
       :class="{ 'text-red-500 focus:text-red-500': errorMessage }"
     >
       {{ label }}

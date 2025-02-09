@@ -1,16 +1,12 @@
 <template>
-  <div>
+  <div class="mt-4">
     <!-- Hero Section -->
     <section
       class="flex justify-center items-center h-[50vh] bg-gradient-to-br from-[#025049] to-[#161f44] text-white text-center"
     >
       <div class="max-w-[600px]">
-        <h1 ref="title" class="text-4xl mb-4">
-          Welcome to My  home page
-        </h1>
-        <p ref="subtitle" class="text-xl mb-8">
-          Alittle bit of animation with
-        </p>
+        <h1 ref="title" class="text-4xl mb-4">Welcome to My home page</h1>
+        <p ref="subtitle" class="text-xl mb-8">Alittle bit of animation with</p>
         <button
           ref="cta"
           class="px-8 py-3 font-bold text-lg text-[#4a6cf7] bg-white border-none rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f0f0f0]"
@@ -21,7 +17,9 @@
     </section>
 
     <!-- Features Section -->
-    <section class="flex justify-around py-16 px-8 bg-white text-[#333]">
+    <section
+      class="flex justify-around py-16 px-8 bg-white text-[#333] dark:bg-[#1D232A] dark:text-white"
+    >
       <div ref="feature1" class="max-w-[300px] text-center">
         <h2 class="text-2xl mb-4">Easy User Signup</h2>
         <p class="text-base">

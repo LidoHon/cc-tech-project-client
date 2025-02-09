@@ -90,7 +90,7 @@ const handlePasswordReset = async (value) => {
 </script>
 
 <template>
-  <div class="flex h-screen w-full">
+  <div class="flex h-screen w-full dark:bg-[#1D232A]">
     <!-- Background Image Section -->
     <div class="relative flex-1 hidden w-0 lg:block">
       <img
@@ -115,11 +115,11 @@ const handlePasswordReset = async (value) => {
             Signup | Login
           </NuxtLink>
         </div>
-        <div class="border-b-2 border-black mb-6"></div>
+        <div class="border-b-2 border-black mb-6 dark:border-gray-100"></div>
 
         <!-- Form Card -->
         <div
-          class="w-full border-2 p-4 border-cyan-100 shadow-lg rounded-lg px-2 sm:px-6 lg:px-4 xl:px-6"
+          class="w-full border-2 p-4 border-cyan-100 shadow-lg rounded-lg px-2 sm:px-6 lg:px-4 xl:px-6 dark:bg-[#475569]"
         >
           <Form
             @submit="handlePasswordReset"
