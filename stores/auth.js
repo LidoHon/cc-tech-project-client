@@ -248,6 +248,84 @@ export const authStore = defineStore(
         }
       },
 
+      async updateUser(payload) {
+        const { userId, userName, phone, imageName, imageType, imageString } =
+          payload;
+
+        const { $apollo } = useNuxtApp();
+
+        try {
+          let variables;
+          const userIdToUpdate =
+            userId ?? Number(localStorage.getItem("authUserId"));
+
+          // const userId = localStorage.getItem("authUserId");
+          const userIdInt = Number(userId);
+
+          if (imageName || imageType || imageString) {
+            variables = {
+              userId: userIdToUpdate,
+              userName,
+              phone,
+              base64String: imageString,
+              imageType: imageType,
+              imageName: imageName,
+              // userId: userIdInt,
+            };
+          } else {
+            variables = {
+              userId: userIdToUpdate,
+              userName,
+              phone,
+              // userId: userIdInt,
+            };
+          }
+
+          this.userId = userIdInt;
+          const res = await $apollo.clients.default.mutate({
+            mutation: UPDATE_PROFILE,
+            variables,
+            awaitRefetchQueries: true,
+            refetchQueries: [
+              {
+                query: PROFILE_QUERY,
+                variables: { id: this.userId },
+              },
+            ],
+            onCompleted: (data) => {
+              console.log("the fetched user data", data);
+            },
+
+            onError: (error) => {
+              console.log("error during fething", error);
+            },
+          });
+          if (res.data) {
+            console.log("update profile responseeee", res.data);
+            if (res.data.updateProfile.message) {
+              this.successMessage = res.data.updateProfile.message;
+              this.processResultStatus = true;
+              this.user = res.data.updateProfile;
+            } else {
+              this.successMessage = "your profile has been updated succesfully";
+              this.processResultStatus = true;
+            }
+          } else {
+            this.errorMessage = res.errors[0].message;
+            this.processResultStatus = false;
+          }
+        } catch (error) {
+          console.log("update profile error", error);
+          if (error.message) {
+            this.setErrorMessage(error.message);
+          }
+          this.processResultStatus = false;
+        } finally {
+          this.onLoad = false;
+          return this.processResultStatus;
+        }
+      },
+
       async updateProfile(payload) {
         const { userName, phone, imageName, imageType, imageString } = payload;
 

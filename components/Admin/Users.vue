@@ -116,7 +116,7 @@ const prevPage = () => {
                   <div class="avatar">
                     <div class="mask mask-squircle h-12 w-12">
                       <img
-                        :src="user.profile || '/img/user0.png'"
+                        :src="user.profile || '/images/user0.png'"
                         alt="User Avatar"
                       />
                     </div>
@@ -160,6 +160,13 @@ const prevPage = () => {
                     class="btn btn-info btn-xs"
                   >
                     Details
+                  </NuxtLink>
+                  <!-- update user -->
+                  <NuxtLink
+                    :to="`/admin/update/${user.id}`"
+                    class="btn btn-warning btn-xs"
+                  >
+                    update
                   </NuxtLink>
                   <!-- <button class="btn btn-warning btn-xs">Update</button> -->
                   <button

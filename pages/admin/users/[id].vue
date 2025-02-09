@@ -47,7 +47,7 @@ onMounted(fetchUserDetails);
       <!-- User Basic Info -->
       <div class="flex flex-col md:flex-row items-center gap-6 mb-8">
         <img
-          :src="userDetails.profile || '/img/user0.png'"
+          :src="userDetails.profile || '/images/user0.png'"
           alt="User Avatar"
           class="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-blue-500 shadow-md"
         />
