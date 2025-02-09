@@ -3,8 +3,4 @@
     <AdminUsers />
   </div>
 </template>
-<script setup>
-// definePageMeta({
-//   middleware: "auth",
-// });
-</script>
+<script setup></script>

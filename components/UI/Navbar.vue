@@ -56,6 +56,13 @@ const handleLogout = async () => {
           >
             Dashboard
           </NuxtLink>
+          <NuxtLink
+            v-if="isAdmin"
+            to="/admin/create-user"
+            class="hidden md:block bg-cyan-200 border-2 rounded-full px-6 mb-2 py-2 hover:bg-cyan-200 hover:ring-blue-500 hover:border-blue-500"
+          >
+            Create user
+          </NuxtLink>
           <div class="dropdown dropdown-end">
             <div
               tabindex="0"
@@ -83,10 +90,14 @@ const handleLogout = async () => {
               <li v-if="isAdmin">
                 <NuxtLink :to="`/admin/dashboard`"> Admin Dashboard </NuxtLink>
               </li>
+              <li v-if="isAdmin">
+                <NuxtLink :to="`/admin/create-user`">
+                  create new user
+                </NuxtLink>
+              </li>
               <li>
                 <NuxtLink :to="`/`" class="justify-between"> Home </NuxtLink>
               </li>
-              <li><NuxtLink to="#">Settings</NuxtLink></li>
               <li><button @click="handleLogout">Logout</button></li>
             </ul>
           </div>
