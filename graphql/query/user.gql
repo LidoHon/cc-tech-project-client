@@ -1,0 +1,14 @@
+query getUser($userId: Int!) {
+  users_by_pk(id: $userId) {
+    created_at
+    email
+    id
+    is_email_verified
+    password
+    phone
+    profile
+    role
+    updated_at
+    username
+  }
+}
