@@ -12,13 +12,12 @@ export const authStore = defineStore(
     state: () => ({
       onLoad: false,
       user: {},
-      notifications: [],
       profileLoading: false,
       isAuthenticated: false,
       isAdmin: false,
       isAuthed: false,
       authPages: ["AuthPage"],
-      anonymousPages: ["index"],
+      anonymousPages: ["index", "Password-reset", "Verify", "Welcome"],
       protectedPages: ["profile"],
       adminPages: ["admin-dashboard", "admin-users-id"],
       role: "",
@@ -77,6 +76,7 @@ export const authStore = defineStore(
       },
 
       isAnonymousPage(page) {
+        console.log(`Anonymous pages: ${this.anonymousPages}`);
         return this.anonymousPages.includes(page);
       },
 
@@ -226,9 +226,9 @@ export const authStore = defineStore(
           if (response.data) {
             const data = response.data;
             console.log("the reset password data:", data);
-            if (data.passwordUpdate) {
-              this.successMessage = data.passwordUpdate.message
-                ? data.passwordUpdate.message
+            if (data.passwordReset) {
+              this.successMessage = data.passwordReset.message
+                ? data.passwordReset.message
                 : "";
             }
             this.processResaltStatus = true;

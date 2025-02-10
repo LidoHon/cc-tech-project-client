@@ -29,9 +29,9 @@ const handleLogout = async () => {
 };
 </script>
 <template>
-  <div v-if="isAuthenticated">
+  <div v-if="isAuthenticated" class="sticky top-0 z-10">
     <div
-      class="navbar bg-base-100 container mx-auto rounded-xl border-1 border-cyan-200 border-b shadow-md sticky top-0 z-50 custom-navbar dark:bg-slate-600"
+      class="navbar bg-base-100 container mx-auto rounded-xl border-1 border-cyan-200 border-b shadow-md custom-navbar dark:bg-slate-600 mt-2"
     >
       <div class="flex-1">
         <a class="btn btn-ghost text-xl text-black">Wellcome</a>
@@ -40,32 +40,21 @@ const handleLogout = async () => {
       <!-- Show search and profile if user is logged in -->
       <div v-if="user">
         <div class="flex-row flex gap-2 mt-2">
-          <!-- <div class="form-control">
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Search..."
-              class="input input-bordered w-24 md:w-auto rounded-full"
-            />
-          </div> -->
           <!-- Dashboard Button for Admins -->
-          <NuxtLink
-            to="/"
-            class="hidden md:block btn btn-ghost text-xl "
-          >
+          <NuxtLink to="/" class="hidden md:block btn btn-ghost text-xl">
             Home
           </NuxtLink>
           <NuxtLink
             v-if="isAdmin"
             to="/admin/dashboard"
-            class="hidden md:block btn btn-ghost text-xl "
+            class="hidden md:block btn btn-ghost text-xl"
           >
             Dashboard
           </NuxtLink>
           <NuxtLink
             v-if="isAdmin"
             to="/admin/create-user"
-            class="hidden md:block btn btn-ghost text-xl "
+            class="hidden md:block btn btn-ghost text-xl"
           >
             Create user
           </NuxtLink>
@@ -114,18 +103,6 @@ const handleLogout = async () => {
 </template>
 
 <style scoped>
-.custom-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  /* Optional border for separation */
-}
-
-.main-container {
-  min-height: 100vh;
-}
-
 .content {
   height: 2000px;
   padding: 1rem;

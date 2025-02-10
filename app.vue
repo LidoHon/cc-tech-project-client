@@ -5,6 +5,12 @@ type Theme = "light" | "dark";
 
 const colorMode = useColorMode();
 
+onMounted(() => {
+  if (!colorMode.preference) {
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    colorMode.preference = prefersDarkMode ? "dark" : "light";
+  }
+});
 const setColorTheme = (newTheme: Theme) => {
   colorMode.preference = newTheme;
 };

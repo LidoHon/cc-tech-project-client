@@ -15,7 +15,7 @@ const authedUser = computed(() => useAuthStore.isAuthed);
 <template>
   <div data-theme="winter">
     <div v-if="loading">
-      <skeleton />
+      <!-- <skeleton /> -->
     </div>
     <!-- Render AuthPage if user is not authenticated -->
     <div v-else-if="!authedUser">

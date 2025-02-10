@@ -99,15 +99,23 @@ const handleForgotPassword = async (value) => {
       v-else
       class="w-full h-full flex flex-col justify-center items-center gap-5 p-5"
     >
-      <div
-        class="w-[60%] h-fit flex items-center justify-center overflow-hidden"
+      <NuxtLink
+        to="https://mail.google.com/mail/u/0/#inbox"
+        target="_blank"
+        class="w-[60%] h-fit flex items-center justify-center overflow-hidden relative group"
       >
         <img
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"
           src="https://i.pinimg.com/736x/8b/b0/e8/8bb0e822cffda99e6a286bfdc247aff4.jpg"
           alt=""
         />
-      </div>
+        <span
+          class="absolute inset-0 flex items-center justify-center text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          Click Here
+        </span>
+      </NuxtLink>
+
       <p class="font-Roboto text-gray-300 text-center dark:text-gray-300">
         We sent an email to the address you provided. Please confirm to change
         your password.

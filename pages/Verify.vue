@@ -46,7 +46,7 @@ function goToLogin() {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center h-screen">
+  <div class="flex flex-col items-center justify-center h-screen dark:bg-[#20161F]">
     <div class="text-center">
       <h1 class="text-2xl font-bold mb-4">
         {{
@@ -69,7 +69,7 @@ function goToLogin() {
         @click="goToLogin"
         class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
       >
-        Go to Login
+        Go to home
       </button>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="unauthorized-page h-screen flex flex-col items-center justify-center text-center bg-pink-50 p-[50px] text-red-950 border-1"
+    class="unauthorized-page h-screen flex flex-col items-center justify-center text-center bg-pink-50 p-[50px] text-red-950 border-1 dark:bg-[#20161F]"
   >
     <!-- SVG for restricted area -->
     <svg

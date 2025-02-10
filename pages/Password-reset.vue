@@ -2,6 +2,8 @@
 import { Form } from "vee-validate";
 import * as yup from "yup";
 import { useToast } from "vue-toast-notification";
+import { gsap } from "gsap";
+
 useSeoMeta({
   title: "cc-project | Reset Password",
   description: "The project app meta.",
@@ -87,17 +89,42 @@ const handlePasswordReset = async (value) => {
     toast.error("Invalid user reference!");
   }
 };
+
+function animateText() {
+  const textElements = document.querySelectorAll(".animated-text");
+
+  gsap.from(textElements, {
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    stagger: 0.3,
+    ease: "power3.out",
+  });
+}
+// GSAP Animation for the text
+onMounted(() => {
+  animateText();
+});
 </script>
 
 <template>
   <div class="flex h-screen w-full dark:bg-[#20161F]">
     <!-- Background Image Section -->
-    <div class="relative flex-1 hidden w-0 lg:block">
-      <img
-        class="absolute inset-0 object-cover w-full h-full"
-        src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-        alt="Background"
-      />
+    <div
+      class="relative flex-1 hidden w-0 lg:flex items-center justify-center bg-gradient-to-r from-purple-600 via-green-200 to-indigo-400 dark:bg-gradient-to-r dark:from-[#20161F] dark:via-[#2A1C23] dark:to-[#1A0E14]"
+    >
+      <div class="text-center space-y-6">
+        <h1
+          class="animated-text text-7xl font-bold bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
+        >
+          Welcome to My Website!
+        </h1>
+        <p
+          class="animated-text text-4xl font-semibold bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
+        >
+          Reset your Password in no time.
+        </p>
+      </div>
     </div>
 
     <!-- Form Section -->
@@ -178,3 +205,11 @@ const handlePasswordReset = async (value) => {
     </div>
   </div>
 </template>
+<style scoped>
+/* Add gradient text styling */
+.animated-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+</style>
