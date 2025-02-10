@@ -78,7 +78,7 @@ function toggleForm() {
 
 <template>
   <div
-    class="w-full border-2 border-cyan-100 shadow-lg rounded-lg items-center justify-center px-2 sm:px-6 lg:flex-none lg:px-4 xl:px-6 dark:bg-[#475569]"
+    class="w-full border-2 border-cyan-100 shadow-lg rounded-lg items-center justify-center px-2 sm:px-6 lg:flex-none lg:px-4 xl:px-6 dark:bg-[#20161F]]"
   >
     <div class="flex flex-col">
       <UIGoogle action="continue" />

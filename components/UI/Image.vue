@@ -60,13 +60,12 @@ const handleFileChange = (event) => {
   }
   emit("image-changed", event);
 };
-
 </script>
 <template>
   <div class="flex flex-col gap-1 items-center justify-center w-full">
     <label
       for="dropzone-file"
-      class="flex flex-col items-center justify-center w-full h-25 border-2 border-gray-300 border-dashed rounded-full cursor-pointer bg-transparent hover:bg-slate-200 hover:backdrop:brightness-90"
+      class="flex flex-col items-center justify-center w-full h-25 border-2 border-gray-300 border-dashed rounded-full cursor-pointer bg-transparent hover:bg-slate-300 hover:backdrop:brightness-40"
     >
       <div class="flex flex-col items-center justify-center pt-5 pb-6">
         <svg

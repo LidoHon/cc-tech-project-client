@@ -161,7 +161,7 @@ const handleUpdateProfle = async (value) => {
 
 <template>
   <div class="container mx-auto">
-    <div class="mt-6 bg-white dark:bg-[#475569] shadow rounded-lg p-6">
+    <div class="mt-6 bg-white dark:bg-[#20161F] shadow rounded-lg p-6">
       <h2 class="text-lg font-bold mb-4">Update User Profile</h2>
       <Form
         @submit="handleUpdateProfle"

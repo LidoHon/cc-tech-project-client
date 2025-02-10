@@ -162,7 +162,7 @@ const toggleProfileUpdate = () => {
 </script>
 
 <template>
-  <div class="min-h-50vh container mx-auto bg-gray-100 p-6 dark:bg-[#1D232A]">
+  <div class="min-h-50vh container mx-auto bg-gray-100 p-6 dark:bg-[#20161F]">
     <!-- Header Section -->
     <div class="flex items-center space-x-4">
       <div class="avatar online">
@@ -205,7 +205,10 @@ const toggleProfileUpdate = () => {
 
     <!-- Profile Update Section -->
     <transition name="slide">
-      <div v-if="showProfileUpdate" class="mt-6 bg-white dark:bg-[#475569] shadow rounded-lg p-6">
+      <div
+        v-if="showProfileUpdate"
+        class="mt-6 bg-white dark:bg-[#20161F] shadow rounded-lg p-6"
+      >
         <h2 class="text-lg font-bold mb-4">Update Profile</h2>
         <Form
           @submit="handleUpdateProfle"
@@ -261,7 +264,7 @@ const toggleProfileUpdate = () => {
           <div class="w-full flex flex-col sm:mb-3 justify-center gap-2">
             <label
               for=""
-              class="lock pl-3 ml-px text-sm font-medium text-gray-700"
+              class="lock pl-3 ml-px text-sm font-medium text-gray-100"
               >Profile
             </label>
             <UIImage
@@ -278,7 +281,7 @@ const toggleProfileUpdate = () => {
           </div>
           <div class="mt-6">
             <button
-              class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-cyan-800 rounded-full hover:bg-cyan-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
+              class="w-full px-6 py-3 text-sm font-medium  text-white capitalize transition-colors duration-300 transform bg-cyan-800 rounded-full hover:bg-cyan-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
             >
               <span v-if="useAuthStore.$state.onLoad == false">
                 Update Profile

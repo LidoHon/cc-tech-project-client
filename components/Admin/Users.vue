@@ -70,8 +70,8 @@ const prevPage = () => {
 </script>
 
 <template>
-  <div class="p-6 bg-gray-100 mb-20 dark:bg-[#1D232A]">
-    <div class="bg-white dark:bg-[#475569] shadow-md rounded-lg p-6">
+  <div class="p-6 bg-gray-100 mb-20 dark:bg-[#20161F]">
+    <div class="bg-white dark:bg-[#20161F] shadow-md rounded-lg p-6">
       <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mb-4">
         Users
       </h1>
@@ -108,7 +108,7 @@ const prevPage = () => {
                   <input type="checkbox" class="checkbox" />
                 </label>
               </td>
-              <td class="py-3 px-6 text-left">
+              <td class="py-3 px-6 text-left text-gray-700 dark:text-gray-100">
                 <div>
                   {{ user.id }}
                 </div>
@@ -118,21 +118,27 @@ const prevPage = () => {
                   <div class="avatar">
                     <div class="mask mask-squircle h-12 w-12">
                       <img
-                        :src="user.profile || '/images/user0.png'"
+                        :src="user.profile || '/images/user1.png'"
                         alt="User Avatar"
                       />
                     </div>
                   </div>
                   <div>
-                    <div class="font-bold">{{ user.username }}</div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <div class="font-bold text-gray-600 dark:text-gray-100">
+                      {{ user.username }}
+                    </div>
+                    <div class="text-sm text-gray-700 dark:text-gray-100">
                       {{ user.email }}
                     </div>
                   </div>
                 </div>
               </td>
-              <td class="py-3 px-6">{{ user.phone || "N/A" }}</td>
-              <td class="py-3 px-6">{{ user.role || "N/A" }}</td>
+              <td class="py-3 px-6 text-gray-700 dark:text-gray-100">
+                {{ user.phone || "N/A" }}
+              </td>
+              <td class="py-3 px-6 text-gray-700 dark:text-gray-100">
+                {{ user.role || "N/A" }}
+              </td>
               <td class="py-3 px-6 font-bold">
                 <span
                   :class="
@@ -188,7 +194,7 @@ const prevPage = () => {
       <!-- Pagination -->
       <div class="flex justify-between items-center mt-4">
         <button
-          class="btn btn-sm btn-primary"
+          class="btn btn-sm btn-primary dark:text-gray-100"
           @click="prevPage"
           :disabled="currentPage === 1"
         >
@@ -196,7 +202,7 @@ const prevPage = () => {
         </button>
         <span>Page {{ currentPage }} of {{ totalPages }}</span>
         <button
-          class="btn btn-sm btn-primary"
+          class="btn btn-sm btn-primary dark:text-gray-100"
           @click="nextPage"
           :disabled="currentPage === totalPages"
         >

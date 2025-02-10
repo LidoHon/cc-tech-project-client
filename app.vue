@@ -14,14 +14,14 @@ useSeoMeta({
   ogTitle: "CC Tech project",
   description: "This is my amazing site, let me tell you all about it.",
   ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "https://example.com/image.png",
+  ogImage: "/public/images/dark.png",
   twitterCard: "summary_large_image",
 });
 </script>
 
 <template>
   <div
-    :data-theme="colorMode.value === 'dark' ? 'dark' : 'winter'"
+    :data-theme="colorMode.value === 'dark' ? 'coffee' : 'winter'"
     class="min-h-screen"
   >
     <!-- Dark Mode Toggle Button -->

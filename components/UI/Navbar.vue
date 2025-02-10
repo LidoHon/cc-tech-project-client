@@ -39,7 +39,7 @@ const handleLogout = async () => {
 
       <!-- Show search and profile if user is logged in -->
       <div v-if="user">
-        <div class="flex-row flex gap-2">
+        <div class="flex-row flex gap-2 mt-2">
           <!-- <div class="form-control">
             <input
               v-model="searchQuery"
@@ -50,16 +50,22 @@ const handleLogout = async () => {
           </div> -->
           <!-- Dashboard Button for Admins -->
           <NuxtLink
+            to="/"
+            class="hidden md:block btn btn-ghost text-xl "
+          >
+            Home
+          </NuxtLink>
+          <NuxtLink
             v-if="isAdmin"
             to="/admin/dashboard"
-            class="hidden md:block bg-cyan-200 border-2 rounded-full px-6 mb-2 py-2 hover:bg-cyan-200 hover:ring-blue-500 hover:border-blue-500"
+            class="hidden md:block btn btn-ghost text-xl "
           >
             Dashboard
           </NuxtLink>
           <NuxtLink
             v-if="isAdmin"
             to="/admin/create-user"
-            class="hidden md:block bg-cyan-200 border-2 rounded-full px-6 mb-2 py-2 hover:bg-cyan-200 hover:ring-blue-500 hover:border-blue-500"
+            class="hidden md:block btn btn-ghost text-xl "
           >
             Create user
           </NuxtLink>

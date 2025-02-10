@@ -196,7 +196,7 @@ const handleSigningUp = async (value) => {
 
 <template>
   <div
-    class="w-full border-2 border-cyan-100 shadow-lg rounded-lg items-center justify-center px-2 sm:px-6 lg:flex-none lg:px-4 xl:px-6 dark:bg-[#475569]"
+    class="w-full border-2 border-cyan-100 shadow-lg rounded-lg items-center justify-center px-2 sm:px-6 lg:flex-none lg:px-4 xl:px-6 dark:bg-[#20161F]"
   >
     <div class="w-full pt-2 px-8 py-8 md:px-8">
       <Form

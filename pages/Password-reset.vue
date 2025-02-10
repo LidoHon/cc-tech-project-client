@@ -90,7 +90,7 @@ const handlePasswordReset = async (value) => {
 </script>
 
 <template>
-  <div class="flex h-screen w-full dark:bg-[#1D232A]">
+  <div class="flex h-screen w-full dark:bg-[#20161F]">
     <!-- Background Image Section -->
     <div class="relative flex-1 hidden w-0 lg:block">
       <img
@@ -119,7 +119,7 @@ const handlePasswordReset = async (value) => {
 
         <!-- Form Card -->
         <div
-          class="w-full border-2 p-4 border-cyan-100 shadow-lg rounded-lg px-2 sm:px-6 lg:px-4 xl:px-6 dark:bg-[#475569]"
+          class="w-full border-2 p-4 border-cyan-100 shadow-lg rounded-lg px-2 sm:px-6 lg:px-4 xl:px-6 dark:bg-[#20161F]"
         >
           <Form
             @submit="handlePasswordReset"
