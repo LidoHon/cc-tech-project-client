@@ -42,6 +42,11 @@
 <script setup>
 import { useRouter } from "vue-router";
 
+useSeoMeta({
+  title: "cc-project | Unauthorized",
+  description: "The project app meta.",
+});
+
 definePageMeta({
   layout: false,
 });

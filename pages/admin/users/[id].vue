@@ -4,6 +4,11 @@ import { useRoute } from "vue-router";
 import { useToast } from "vue-toast-notification";
 import { userStore } from "~/stores/user";
 
+useSeoMeta({
+  title: "cc-project | User Details Page",
+  description: "The project app meta.",
+});
+
 const route = useRoute();
 const toast = useToast();
 const userId = parseInt(route.params.id);

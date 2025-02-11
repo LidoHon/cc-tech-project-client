@@ -1,4 +1,4 @@
-# CC Tech Internship Entrance Test
+# CC Tech Internship Project
 
 This project is an internship entrance test for CC Tech, built using modern technologies and frameworks. It demonstrates essential features like user authentication, profile management, role-based access control, and an admin dashboard. The application is designed to give a real-world example of a web app with clean architecture and modern frontend technologies.
 

@@ -3,6 +3,11 @@ import { onMounted, ref } from "vue";
 import { authStore } from "~/stores/auth";
 import { gsap } from "gsap";
 
+useSeoMeta({
+  title: "cc-project | Welcome",
+  description: "The project app meta.",
+});
+
 // Reactive state
 const auth = authStore();
 const isAuthenticated = ref(false);

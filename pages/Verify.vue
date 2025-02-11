@@ -2,6 +2,11 @@
 import { useRoute, useRouter } from "vue-router";
 import { ref, onMounted } from "vue";
 
+
+useSeoMeta({
+  title: "cc-project | Verify Email",
+  description: "The project app meta.",
+}); 
 const useAuthStore = authStore();
 const route = useRoute();
 const router = useRouter();

@@ -5,6 +5,11 @@ import { Form, Field } from "vee-validate";
 import { useToast } from "vue-toast-notification";
 import * as yup from "yup";
 
+useSeoMeta({
+  title: "cc-project | Update User",
+  description: "The project app meta.",
+});
+
 const route = useRoute();
 const router = useRouter();
 const toast = useToast();

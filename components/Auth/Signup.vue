@@ -179,7 +179,7 @@ const handleSigningUp = async (value) => {
   const result = await useAuthStore.signupUser(payload);
   if (result) {
     toast.success(
-      "Welcome to bookit, check your email to verify your account!"
+      "Welcome to my app, check your email to verify your account!"
     );
     router.push("/welcome");
   } else {

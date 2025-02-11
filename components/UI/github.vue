@@ -75,7 +75,7 @@ onMounted(() => {
   <button
     @click="handleClick"
     :disabled="isLoading"
-    class="w-full flex items-center justify-center mt-2 text-gray-600 transition-colors duration-300 transform border rounded-full hover:bg-cyan-200 hover:ring-blue-500 hover:border-blue-500"
+    class="w-full flex items-center justify-center mt-2 text-gray-600 transition-colors duration-300 transform border rounded-full hover:bg-cyan-600 hover:ring-blue-500 hover:border-blue-500"
   >
     <div class="w-full relative flex" v-if="!isLoading">
       <div class="px-2 py-3">

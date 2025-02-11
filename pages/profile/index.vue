@@ -4,6 +4,11 @@ import { Form, Field } from "vee-validate";
 import { useToast } from "vue-toast-notification";
 import * as yup from "yup";
 
+useSeoMeta({
+  title: "cc-project | Profile Page",
+  description: "The project app meta.",
+});
+
 const toast = useToast();
 const getExtension = (filename) => {
   const extension = filename.split(".");
@@ -281,7 +286,7 @@ const toggleProfileUpdate = () => {
           </div>
           <div class="mt-6">
             <button
-              class="w-full px-6 py-3 text-sm font-medium  text-white capitalize transition-colors duration-300 transform bg-cyan-800 rounded-full hover:bg-cyan-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
+              class="w-full px-6 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-cyan-800 rounded-full hover:bg-cyan-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
             >
               <span v-if="useAuthStore.$state.onLoad == false">
                 Update Profile

@@ -3,4 +3,9 @@
     <AdminUsers />
   </div>
 </template>
-<script setup></script>
+<script setup>
+useSeoMeta({
+  title: "cc-project | Admin-dashboard",
+  description: "The project app meta.",
+});
+</script>
