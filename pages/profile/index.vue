@@ -266,7 +266,7 @@ const toggleProfileUpdate = () => {
               "
             />
           </div>
-          <div class="w-full flex flex-col sm:mb-3 justify-center gap-2">
+          <!-- <div class="w-full flex flex-col sm:mb-3 justify-center gap-2">
             <label
               for=""
               class="lock pl-3 ml-px text-sm font-medium text-gray-100"
@@ -283,7 +283,7 @@ const toggleProfileUpdate = () => {
                   : ''
               "
             />
-          </div>
+          </div> -->
           <div class="mt-6">
             <button
               class="w-full px-6 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-cyan-800 rounded-full hover:bg-cyan-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"

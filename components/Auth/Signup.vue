@@ -188,7 +188,7 @@ const handleSigningUp = async (value) => {
       toast.error(message);
       useAuthStore.setErrorMessage("");
     } else {
-      toast.error("what the fuck");
+      toast.error("wsomething went wrong");
     }
   }
 };

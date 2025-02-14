@@ -177,18 +177,19 @@ const handleSigningUp = async (value) => {
     };
   }
   const result = await useAuthStore.signupUser(payload);
+  router.push("/admin/dashboard");
   if (result) {
     toast.success(
       "Welcome to my app, check your email to verify your account!"
     );
-    router.push("/welcome");
+    router.push("/admin/dashboard");
   } else {
     if (useAuthStore.$state.errorMessage) {
       const message = useAuthStore.$state.errorMessage;
-      toast.error(message);
+      // toast.error(message);
       useAuthStore.setErrorMessage("");
     } else {
-      toast.error("what the fuck");
+      toast.error("someting went wrong");
     }
   }
 };
