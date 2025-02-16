@@ -1,3 +1,56 @@
+<script>
+import { gsap } from "gsap";
+
+export default {
+  mounted() {
+    // Hero Section Animations
+    gsap.from(this.$refs.title, {
+      duration: 1,
+      y: -50,
+      opacity: 0,
+      ease: "power2.out",
+    });
+    gsap.from(this.$refs.subtitle, {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 0.5,
+    });
+    gsap.from(this.$refs.cta, {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 1,
+    });
+
+    // Features Section Animations
+    gsap.from(this.$refs.feature1, {
+      duration: 1,
+      x: -100,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 1.5,
+    });
+    gsap.from(this.$refs.feature2, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 2,
+    });
+    gsap.from(this.$refs.feature3, {
+      duration: 1,
+      x: 100,
+      opacity: 0,
+      ease: "power2.out",
+      delay: 2.5,
+    });
+  },
+};
+</script>
+
 <template>
   <div class="mt-4">
     <!-- Hero Section -->
@@ -96,56 +149,3 @@
     </section>
   </div>
 </template>
-
-<script>
-import { gsap } from "gsap";
-
-export default {
-  mounted() {
-    // Hero Section Animations
-    gsap.from(this.$refs.title, {
-      duration: 1,
-      y: -50,
-      opacity: 0,
-      ease: "power2.out",
-    });
-    gsap.from(this.$refs.subtitle, {
-      duration: 1,
-      y: 50,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 0.5,
-    });
-    gsap.from(this.$refs.cta, {
-      duration: 1,
-      y: 50,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 1,
-    });
-
-    // Features Section Animations
-    gsap.from(this.$refs.feature1, {
-      duration: 1,
-      x: -100,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 1.5,
-    });
-    gsap.from(this.$refs.feature2, {
-      duration: 1,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 2,
-    });
-    gsap.from(this.$refs.feature3, {
-      duration: 1,
-      x: 100,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 2.5,
-    });
-  },
-};
-</script>
